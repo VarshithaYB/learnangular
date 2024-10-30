@@ -1,0 +1,18 @@
+<div>
+    <h1>This is the Coffee Shop</h1> 
+    <h3>
+       <input type="text" name="qty" [(ngModel)]="qty">
+       <input type="button" name="orderBtn" value="Order" (click)="placeOrder()" [disabled]="qty <= 0">
+    </h3>
+ </div>
+ <hr>
+ <div *ngFor="let coffee of CoffeeList">
+    {{coffee.Coffeename}} 
+     {{coffee.description}} 
+     {{coffee.brand}} 
+     {{coffee.qty}}  
+     {{coffee.price}}
+ </div>
+ <hr>
+ 
+
